@@ -11,5 +11,5 @@ tenets:
       
       go.file(depth = any):
         @review comment
-        go.ident:
-          name as packageName
+        go.ident
+        #  name as packageName
