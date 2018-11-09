@@ -1,0 +1,3 @@
+package testpackage
+
+import "goodpack"

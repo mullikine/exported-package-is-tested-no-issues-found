@@ -1,0 +1,26 @@
+funcs:
+  - name: isNotTestPath
+    type: asserter
+    body: |
+      function (str) {
+        return str.indexOf("test/") != 0
+      }
+tenets:
+  - name: exported-package-is-tested
+    flows:
+      codelingo/docs:
+        title: Exported package is tested
+        body: |
+      codelingo/review:
+        comment: The publicly exported package `{{packageName}}` is untested. Consider writing a test to exercise its behavior.
+    query: |
+      import codelingo/ast/go
+      
+      go.dir(depth = any):
+        filename as packageDirName
+        isNotTestPath(packageDirName)
+        go.file:
+          filename as packageFileName
+          @review comment
+          go.ident:
+            name as packageName
