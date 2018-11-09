@@ -1,0 +1,1102 @@
+/home/shane/var/smulliga/source/git/mullikine/codelingo/tenets/codelingo/lightning-network-daemon/exported-package-is-tested
+ca32cd6 lightning-network-daemon δ » sh-ranger-lingo .
+/home/shane/scripts/sh-ranger-lingo
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+.  EDIT
+t  lingo test-tenet      (review flow)    (not necessarily a tenet, but this copies the repo)
+w  lingo test-tenet -w   (rewrite flow)   (not necessarily a tenet, but this copies the repo)
+r  lingo-review-here
+R  lingo-review          (review with codelingo/codelingo binaries, not reliable)
+D  lingo-review --debug  (review with codelingo/codelingo binaries, not reliable)
+8  lingo-review -version
+W  lingo-rewrite         (rewrite with codelingo/codelingo binaries, not reliable)
+9  lingo-rewrite -version
+E  run-example
+t
+lingo test-tenet .
+codelingo.yaml folder name:
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+lingo -tempdir "/tmp/td_CBjp5y"  -here run review --lingo-file "/home/shane/var/smulliga/source/git/mullikine/codelingo/tenets/codelingo/lightning-network-daemon/exported-package-is-tested/codelingo.yaml" -o expected.json
+Constructing new git repo in temp folder... :: Fri Nov  9 14:49:47 NZDT 2018
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+Running: $HOME/scripts/rs -nc
+        -nogit
+        -noswap
+        $HOME/source/git/mullikine/codelingo/tenets/codelingo/lightning-network-daemon/exported-package-is-tested/
+        /tmp/td_CBjp5y
+/usr/bin/rsync  -a -rtlhx -pug -s  --inplace --append   --exclude .cache  --exclude .git/ --exclude .gitignore --exclude TODO  --exclude '*~' --exclude '.#*'  $HOME/source/git/mullikine/codelingo/tenets/codelingo/lightning-network-daemon/exported-package-is-tested/ /tmp/td_CBjp5y
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+/tmp/td_CBjp5y
+Syncing your repo...
+Running review flow...
+badpack/example-bad.go:1:17
+
+    The publicly exported package `goodpack` is untested. Consider writing a test to exercise its behavior.
+
+
+    ...
+
+  + package goodpack
+
+    // this is not tested, but should be
+    ...
+
+[o]pen [k]eep [d]iscard : k
+goodpack/example-good.go:1:17
+
+    The publicly exported package `goodpack` is untested. Consider writing a test to exercise its behavior.
+
+
+    ...
+
+  + package goodpack
+
+    // this should be tested, and it is
+    ...
+
+[o]pen [k]eep [d]iscard : k
+test/my_test.go:1:20
+
+    The publicly exported package `testpackage` is untested. Consider writing a test to exercise its behavior.
+
+
+    ...
+
+  + package testpackage
+
+    import "goodpack"
+    ...
+
+[o]pen [k]eep [d]iscard : k
+Done! 3 issues found.
+Done! 3 issues written to expected.json
+
+
+review finished
+
+Reformulate?
+
+working_dir (loop): /tmp/td_CBjp5y
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: q
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
+[master 7f84b0a] edit
+ 1 file changed, 20 insertions(+)
++ diff-so-fancy
++ less --tabs=4
++ git diff 'HEAD^!'
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/expected.json b/expected.json
+index e69de29..40d8b69 100644
+--- a/expected.json
++++ b/expected.json
+@@ -0,0 +1,20 @@
++[
++  {
++   "Comment": "The publicly exported package `goodpack` is untested. Consider writing a test to exercise its behavior.",
++   "Filename": "badpack/example-bad.go",
++   "Line": 1,
++   "Snippet": "\npackage goodpack\n\n// this is not tested, but should be"
++  },
++  {
++   "Comment": "The publicly exported package `goodpack` is untested. Consider writing a test to exercise its behavior.",
++   "Filename": "goodpack/example-good.go",
++   "Line": 1,
++   "Snippet": "\npackage goodpack\n\n// this should be tested, and it is"
++  },
++  {
++   "Comment": "The publicly exported package `testpackage` is untested. Consider writing a test to exercise its behavior.",
++   "Filename": "test/my_test.go",
++   "Line": 1,
++   "Snippet": "\npackage testpackage\n\nimport \"goodpack\""
++  }
++ ]
+\ No newline at end of file
+++ vc get-hash
++ echo 'HEAD: 7f84b0abfd852b34056c533019764c5334eef1e5'
+HEAD: 7f84b0abfd852b34056c533019764c5334eef1e5
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+[master 56d3087] removed expected.json
+ 1 file changed, 20 deletions(-)
+ delete mode 100644 expected.json
++ lingo run review -o expected.json
+Clear git remotes?
+
+ [Yn]: n
+Syncing your repo...
+Running review flow...
+Done! No issues found.
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: y
++ ans=yes_edit
++ case "$ans" in
+++ pwd
++ tm sph -c /tmp/td_CBjp5y 'v codelingo.yaml'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
++ ans=review
++ case "$ans" in
++ commit-changes-and-show-diff
++ git add -A .
++ git commit -m edit
+[master 0480c72] edit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
++ set -x
++ git diff 'HEAD^!'
++ diff-so-fancy
++ less --tabs=4
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/codelingo.yaml b/codelingo.yaml
+index f90f098..22b6902 100644
+--- a/codelingo.yaml
++++ b/codelingo.yaml
+@@ -20,7 +20,7 @@ tenets:
+         filename as packageDirName
+         isNotTestPath(packageDirName)
+         go.file:
+-          filename as packageFileName
++          # filename as packageFileName
+           @review comment
+           go.ident:
+             name as packageName
+\ No newline at end of file
+++ vc get-hash
++ echo 'HEAD: 0480c72cb0872b73c21fc9597fe8fc7b69af4c81'
+HEAD: 0480c72cb0872b73c21fc9597fe8fc7b69af4c81
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+On branch master
+nothing to commit, working tree clean
++ lingo run review -o expected.json
+Clear git remotes?
+
+ [Yn]: n
+Syncing your repo...
+Running review flow...
+Done! No issues found.
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: y
++ ans=yes_edit
++ case "$ans" in
+++ pwd
++ tm sph -c /tmp/td_CBjp5y 'v codelingo.yaml'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
++ ans=review
++ case "$ans" in
++ commit-changes-and-show-diff
++ git add -A .
++ git commit -m edit
+On branch master
+nothing to commit, working tree clean
++ set -x
++ diff-so-fancy
++ less --tabs=4
++ git diff 'HEAD^!'
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/codelingo.yaml b/codelingo.yaml
+index f90f098..22b6902 100644
+--- a/codelingo.yaml
++++ b/codelingo.yaml
+@@ -20,7 +20,7 @@ tenets:
+         filename as packageDirName
+         isNotTestPath(packageDirName)
+         go.file:
+-          filename as packageFileName
++          # filename as packageFileName
+           @review comment
+           go.ident:
+             name as packageName
+\ No newline at end of file
+++ vc get-hash
++ echo 'HEAD: 0480c72cb0872b73c21fc9597fe8fc7b69af4c81'
+HEAD: 0480c72cb0872b73c21fc9597fe8fc7b69af4c81
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+On branch master
+nothing to commit, working tree clean
++ lingo run review -o expected.json
+Clear git remotes?
+
+ [Yn]: n
+Syncing your repo...
+Running review flow...
+Done! No issues found.
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
++ ans=review
++ case "$ans" in
++ commit-changes-and-show-diff
++ git add -A .
++ git commit -m edit
+[master 7627d8d] edit
+ 1 file changed, 8 insertions(+), 8 deletions(-)
++ set -x
++ diff-so-fancy
++ git diff 'HEAD^!'
++ less --tabs=4
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/codelingo.yaml b/codelingo.yaml
+index 22b6902..15d8b63 100644
+--- a/codelingo.yaml
++++ b/codelingo.yaml
+@@ -16,11 +16,11 @@ tenets:
+     query: |
+       import codelingo/ast/go
+
+-      go.dir(depth = any):
+-        filename as packageDirName
+-        isNotTestPath(packageDirName)
+-        go.file:
+-          # filename as packageFileName
+-          @review comment
+-          go.ident:
+-            name as packageName
+\ No newline at end of file
++      # go.dir(depth = any):
++      #   filename as packageDirName
++      #   isNotTestPath(packageDirName)
++      go.file(depth = any):
++        # filename as packageFileName
++        @review comment
++        go.ident:
++          name as packageName
+\ No newline at end of file
+++ vc get-hash
++ echo 'HEAD: 7627d8db492ba2b2288d347f5e69759fd4cef103'
+HEAD: 7627d8db492ba2b2288d347f5e69759fd4cef103
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+On branch master
+nothing to commit, working tree clean
++ lingo run review -o expected.json
+Clear git remotes?
+
+ [Yn]: n
+Syncing your repo...
+Running review flow...
+Done! No issues found.
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
++ ans=review
++ case "$ans" in
++ commit-changes-and-show-diff
++ git add -A .
++ git commit -m edit
+[master 962d5ef] edit
+ 1 file changed, 7 deletions(-)
++ set -x
++ diff-so-fancy
++ git diff 'HEAD^!'
++ less --tabs=4
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/codelingo.yaml b/codelingo.yaml
+index 15d8b63..fd8b9a1 100644
+--- a/codelingo.yaml
++++ b/codelingo.yaml
+@@ -1,10 +1,3 @@
+-funcs:
+-  - name: isNotTestPath
+-    type: asserter
+-    body: |
+-      function (str) {
+-        return str.indexOf("test/") != 0
+-      }
+ tenets:
+   - name: exported-package-is-tested
+     flows:
+++ vc get-hash
++ echo 'HEAD: 962d5effb1cb7e5ca7dac5f99b57a54ae914fc94'
+HEAD: 962d5effb1cb7e5ca7dac5f99b57a54ae914fc94
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+On branch master
+nothing to commit, working tree clean
++ lingo run review -o expected.json
+Clear git remotes?
+
+ [Yn]: n
+Syncing your repo...
+Running review flow...
+Done! No issues found.
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: S
++ ans=zsh
++ case "$ans" in
+++ pwd
++ tm -d spv -c /tmp/td_CBjp5y zsh
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
++ ans=review
++ case "$ans" in
++ commit-changes-and-show-diff
++ git add -A .
++ git commit -m edit
+[master a3214b7] edit
+ 1 file changed, 4 deletions(-)
++ set -x
++ diff-so-fancy
++ git diff 'HEAD^!'
++ less --tabs=4
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/codelingo.yaml b/codelingo.yaml
+index fd8b9a1..3390e52 100644
+--- a/codelingo.yaml
++++ b/codelingo.yaml
+@@ -9,11 +9,7 @@ tenets:
+     query: |
+       import codelingo/ast/go
+
+-      # go.dir(depth = any):
+-      #   filename as packageDirName
+-      #   isNotTestPath(packageDirName)
+       go.file(depth = any):
+-        # filename as packageFileName
+         @review comment
+         go.ident:
+           name as packageName
+\ No newline at end of file
+++ vc get-hash
++ echo 'HEAD: a3214b70b61d25c23d5ab959eb73cb0378046433'
+HEAD: a3214b70b61d25c23d5ab959eb73cb0378046433
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+On branch master
+nothing to commit, working tree clean
++ lingo run review -o expected.json
+Clear git remotes?
+
+ [Yn]: n
+Syncing your repo...
+Running review flow...
+Done! No issues found.
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
++ ans=review
++ case "$ans" in
++ commit-changes-and-show-diff
++ git add -A .
++ git commit -m edit
+[master 5309cc9] edit
+ 1 file changed, 2 insertions(+), 2 deletions(-)
++ set -x
++ diff-so-fancy
++ git diff 'HEAD^!'
++ less --tabs=4
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/codelingo.yaml b/codelingo.yaml
+index 3390e52..fb51454 100644
+--- a/codelingo.yaml
++++ b/codelingo.yaml
+@@ -11,5 +11,5 @@ tenets:
+
+       go.file(depth = any):
+         @review comment
+-        go.ident:
+-          name as packageName
+\ No newline at end of file
++        go.ident
++        #  name as packageName
+\ No newline at end of file
+++ vc get-hash
++ echo 'HEAD: 5309cc9f0c77f44400cc0b98ba0bc55ee75457f4'
+HEAD: 5309cc9f0c77f44400cc0b98ba0bc55ee75457f4
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+On branch master
+nothing to commit, working tree clean
++ lingo run review -o expected.json
+Clear git remotes?
+
+ [Yn]: n
+Syncing your repo...
+Running review flow...
+Done! No issues found.
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: S
++ ans=zsh
++ case "$ans" in
+++ pwd
++ tm -d spv -c /tmp/td_CBjp5y zsh
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
++ ans=review
++ case "$ans" in
++ commit-changes-and-show-diff
++ git add -A .
++ git commit -m edit
+[master 2e1b43c] edit
+ 1 file changed, 2 insertions(+), 3 deletions(-)
++ set -x
++ diff-so-fancy
++ less --tabs=4
++ git diff 'HEAD^!'
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/codelingo.yaml b/codelingo.yaml
+index fb51454..531e2ef 100644
+--- a/codelingo.yaml
++++ b/codelingo.yaml
+@@ -5,11 +5,10 @@ tenets:
+         title: Exported package is tested
+         body: |
+       codelingo/review:
+-        comment: The publicly exported package `{{packageName}}` is untested. Consider writing a test to exercise its behavior.
++        comment: The publicly exported package is untested. Consider writing a test to exercise its behavior.
+     query: |
+       import codelingo/ast/go
+
+       go.file(depth = any):
+         @review comment
+-        go.ident
+-        #  name as packageName
+\ No newline at end of file
++        go.ident
+\ No newline at end of file
+++ vc get-hash
++ echo 'HEAD: 2e1b43cb689fcb6242557487d525106f0678a7f9'
+HEAD: 2e1b43cb689fcb6242557487d525106f0678a7f9
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+On branch master
+nothing to commit, working tree clean
++ lingo run review -o expected.json
+Clear git remotes?
+
+ [Yn]: n
+Syncing your repo...
+Running review flow...
+Done! No issues found.
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
++ ans=review
++ case "$ans" in
++ commit-changes-and-show-diff
++ git add -A .
++ git commit -m edit
+[master 934c3d8] edit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
++ set -x
++ diff-so-fancy
++ less --tabs=4
++ git diff 'HEAD^!'
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/codelingo.yaml b/codelingo.yaml
+index 531e2ef..7730094 100644
+--- a/codelingo.yaml
++++ b/codelingo.yaml
+@@ -9,6 +9,6 @@ tenets:
+     query: |
+       import codelingo/ast/go
+
++      @review comment
+       go.file(depth = any):
+-        @review comment
+         go.ident
+\ No newline at end of file
+++ vc get-hash
++ echo 'HEAD: 934c3d8461fde88654247ccb922653f40b2097bc'
+HEAD: 934c3d8461fde88654247ccb922653f40b2097bc
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+On branch master
+nothing to commit, working tree clean
++ lingo run review -o expected.json
+Clear git remotes?
+
+ [Yn]: n
+Syncing your repo...
+Running review flow...
+Done! No issues found.
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: c
++ ans=clear_remote
++ case "$ans" in
++ git remote remove codelingo
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: r
++ ans=review
++ case "$ans" in
++ commit-changes-and-show-diff
++ git add -A .
++ git commit -m edit
+On branch master
+nothing to commit, working tree clean
++ set -x
++ git diff 'HEAD^!'
++ diff-so-fancy
++ less --tabs=4
++ echo
+
++ git diff 'HEAD^!'
++ cat
+diff --git a/codelingo.yaml b/codelingo.yaml
+index 531e2ef..7730094 100644
+--- a/codelingo.yaml
++++ b/codelingo.yaml
+@@ -9,6 +9,6 @@ tenets:
+     query: |
+       import codelingo/ast/go
+
++      @review comment
+       go.file(depth = any):
+-        @review comment
+         go.ident
+\ No newline at end of file
+++ vc get-hash
++ echo 'HEAD: 934c3d8461fde88654247ccb922653f40b2097bc'
+HEAD: 934c3d8461fde88654247ccb922653f40b2097bc
++ echo
+
++ rm -f tags expected.json
++ git add -u
++ git commit -m 'removed expected.json'
+On branch master
+nothing to commit, working tree clean
++ lingo run review -o expected.json
+Syncing your repo...
+Running review flow...
+goodpack/example-good.go:1:1
+
+    The publicly exported package is untested. Consider writing a test to exercise its behavior.
+
+
+    ...
+
+  + package goodpack
+
+    // this should be tested, and it is
+    ...
+
+[o]pen [k]eep [d]iscard : k
+test/my_test.go:1:1
+
+    The publicly exported package is untested. Consider writing a test to exercise its behavior.
+
+
+    ...
+
+  + package testpackage
+
+    import "goodpack"
+    ...
+
+[o]pen [k]eep [d]iscard : k
+badpack/example-bad.go:1:1
+
+    The publicly exported package is untested. Consider writing a test to exercise its behavior.
+
+
+    ...
+
+  + package goodpack
+
+    // this is not tested, but should be
+    ...
+
+[o]pen [k]eep [d]iscard : k
+Done! 3 issues found.
+Done! 3 issues written to expected.json
+
++ test -f ''
++ notify-send 'review finished on %1037'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: b
++ ans=
++ case "$ans" in
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+: B
++ ans=upload-to-blog
++ case "$ans" in
++ echo 'working_dir: /tmp/td_CBjp5y'
+working_dir: /tmp/td_CBjp5y
++ yn 'Continue?'
+Continue?
+
+ [Yn]: y
++ problem=
++ yn 'Differentiate tenet with a problem name?'
+Differentiate tenet with a problem name?
+
+ [Yn]: c
+ [Yn]: l
+ [Yn]: y
++ echo -n 'problem description: '
+problem description: + read problem
+clearing remote fixes no issues found temporarily
+++ p 'clearing remote fixes no issues found temporarily'
+++ slugify
++ problemslug=clearing-remote-fixes-no-issues-found-temporarily
++ echo 'clearing remote fixes no issues found temporarily'
++ clean-tty-out
++ sed '/^[a-z]\?\[.\] .*/d'
++ tm -f get-last-output 'lingo -tempdir'
++ lingo-error-annotate
++ return 0
+++ tenet-whoami
++ tenetname=exported-package-is-tested
++ problempath=
++ '[' -n clearing-remote-fixes-no-issues-found-temporarily ']'
++ problempath=/clearing-remote-fixes-no-issues-found-temporarily
++ problemfpath=
++ '[' -n clearing-remote-fixes-no-issues-found-temporarily ']'
++ problemfpath=_clearing-remote-fixes-no-issues-found-temporarily
++ orgfn=exported-package-is-tested_clearing-remote-fixes-no-issues-found-temporarily.org
++ blogpath=/home/shane/source/git/mullikine/mullikine.github.io/codelingo/troubleshooting/tenets
++ blogtenetsdir=/var/smulliga/source/git/mullikine/tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily
++ mkdir -p /var/smulliga/source/git/mullikine/tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily
++ rs -nc -nogit -noswap /tmp/td_CBjp5y/ /var/smulliga/source/git/mullikine/tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily
+Running: $HOME/scripts/rs -nc
+        -nogit
+        -noswap
+        /tmp/td_CBjp5y/
+        $MYGIT/mullikine/tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily
+/usr/bin/rsync  -a -rtlhx -pug -s  --inplace --append   --exclude .cache  --exclude .git/ --exclude .gitignore --exclude TODO  --exclude '*~' --exclude '.#*'  /tmp/td_CBjp5y/ $MYGIT/mullikine/tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
++ rm -f /var/smulliga/source/git/mullikine/tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily/tags
++ pwd
++ mnm
+/tmp/td_CBjp5y
++ cd /var/smulliga/source/git/mullikine/tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily
++ git add -A .
++ git commit -m 'added exported-package-is-tested'
+[master bab13d0] added exported-package-is-tested
+ 8 files changed, 50 insertions(+)
+ create mode 100644 blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily/README.md
+ create mode 100644 blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily/badpack/example-bad.go
+ create mode 100644 blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily/codelingo.yaml
+ create mode 100755 blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily/expected.json
+ create mode 100644 blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily/goodpack/example-good.go
+ create mode 100644 blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily/problem.txt
+ create mode 100644 blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily/test/my_test.go
+ create mode 100644 blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily/tty-output.log
++ git push origin
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (11/11), 1.45 KiB | 1.45 MiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mullikine/tenets
+   08ed9e1..bab13d0  master -> master
+++ git-file-to-url /var/smulliga/source/git/mullikine/tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily
+++ org clink
++ teneturl='[[https://github.com/mullikine/tenets/tree/master/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily][tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily at master  mullikine/tenets  GitHub]]'
+++ git-file-to-url /home/shane/source/git/mullikine/mullikine.github.io/codelingo/troubleshooting/tenets/exported-package-is-tested_clearing-remote-fixes-no-issues-found-temporarily.org
+++ si +tenet trouble
+++ org clink
++ orgurl='[[https://github.com/mullikine/mullikine.github.io/tree/master/codelingo/troubleshooting/tenets/exported-package-is-tested_clearing-remote-fixes-no-issues-found-temporarily.org][github.com/mullikine/mullikine.github.io/tree/master/codelingo/troubleshooting/tenets/exported-package-is-tested_clearing-remote-fixes-no-issues-found-temporarily.org]]'
++ pl '| tenet source'
++ pl '|-'
++ pl '| [[https://github.com/mullikine/tenets/tree/master/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily][tenets/blog/exported-package-is-tested/clearing-remote-fixes-no-issues-found-temporarily at master  mullikine/tenets  GitHub]]'
++ echo
++ pl '| org'
++ pl '|-'
++ pl '| [[https://github.com/mullikine/mullikine.github.io/tree/master/codelingo/troubleshooting/tenets/exported-package-is-tested_clearing-remote-fixes-no-issues-found-temporarily.org][github.com/mullikine/mullikine.github.io/tree/master/codelingo/troubleshooting/tenets/exported-package-is-tested_clearing-remote-fixes-no-issues-found-temporarily.org]]'
++ echo
++ cd /home/shane/go/src/github.com/codelingo/codelingo
++ org-repo-info
++ echo
++ cd /home/shane/go/src/github.com/codelingo/lingo
++ org-repo-info
++ tenet-to-org
++ cp -a exported-package-is-tested_clearing-remote-fixes-no-issues-found-temporarily.org /home/shane/source/git/mullikine/mullikine.github.io/codelingo/troubleshooting/tenets
+++ pwd
++ tm -d spv -c /tmp/td_CBjp5y 'og /home/shane/source/git/mullikine/mullikine.github.io/codelingo/troubleshooting/tenets/exported-package-is-tested_clearing-remote-fixes-no-issues-found-temporarily.org'
++ :
+++ qa -. edit -c clear_remote -a annotate -y yes_edit -v vim_edit -S zsh -H hsplit -r review -L save-tty-log -B upload-to-blog -D review-debug -w rewrite -X rewrite-debug -R ranger -d done -x exit
+[.] edit
+[c] clear_remote
+[a] annotate
+[y] yes_edit
+[v] vim_edit
+[S] zsh
+[H] hsplit
+[r] review
+[L] save-tty-log
+[B] upload-to-blog
+[D] review-debug
+[w] rewrite
+[X] rewrite-debug
+[R] ranger
+[d] done
+[x] exit
+:
