@@ -1,10 +1,3 @@
-funcs:
-  - name: isNotTestPath
-    type: asserter
-    body: |
-      function (str) {
-        return str.indexOf("test/") != 0
-      }
 tenets:
   - name: exported-package-is-tested
     flows:
