@@ -1,0 +1,20 @@
+[
+  {
+   "Comment": "The publicly exported package `goodpack` is untested. Consider writing a test to exercise its behavior.",
+   "Filename": "badpack/example-bad.go",
+   "Line": 1,
+   "Snippet": "\npackage goodpack\n\n// this is not tested, but should be"
+  },
+  {
+   "Comment": "The publicly exported package `goodpack` is untested. Consider writing a test to exercise its behavior.",
+   "Filename": "goodpack/example-good.go",
+   "Line": 1,
+   "Snippet": "\npackage goodpack\n\n// this should be tested, and it is"
+  },
+  {
+   "Comment": "The publicly exported package `testpackage` is untested. Consider writing a test to exercise its behavior.",
+   "Filename": "test/my_test.go",
+   "Line": 1,
+   "Snippet": "\npackage testpackage\n\nimport \"goodpack\""
+  }
+ ]
