@@ -5,11 +5,10 @@ tenets:
         title: Exported package is tested
         body: |
       codelingo/review:
-        comment: The publicly exported package `{{packageName}}` is untested. Consider writing a test to exercise its behavior.
+        comment: The publicly exported package is untested. Consider writing a test to exercise its behavior.
     query: |
       import codelingo/ast/go
       
       go.file(depth = any):
         @review comment
         go.ident
-        #  name as packageName
