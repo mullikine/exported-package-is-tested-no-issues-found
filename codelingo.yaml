@@ -16,11 +16,11 @@ tenets:
     query: |
       import codelingo/ast/go
       
-      go.dir(depth = any):
-        filename as packageDirName
-        isNotTestPath(packageDirName)
-        go.file:
-          # filename as packageFileName
-          @review comment
-          go.ident:
-            name as packageName
+      # go.dir(depth = any):
+      #   filename as packageDirName
+      #   isNotTestPath(packageDirName)
+      go.file(depth = any):
+        # filename as packageFileName
+        @review comment
+        go.ident:
+          name as packageName
