@@ -20,7 +20,7 @@ tenets:
         filename as packageDirName
         isNotTestPath(packageDirName)
         go.file:
-          filename as packageFileName
+          # filename as packageFileName
           @review comment
           go.ident:
             name as packageName
