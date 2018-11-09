@@ -9,6 +9,6 @@ tenets:
     query: |
       import codelingo/ast/go
       
+      @review comment
       go.file(depth = any):
-        @review comment
         go.ident
